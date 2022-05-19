@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
       <AppHead />
-      <div className={styles.container}></div>
+      <div className={styles.container}>
+        <h1>Hello world</h1>
+      </div>
     </>
   )
 }
