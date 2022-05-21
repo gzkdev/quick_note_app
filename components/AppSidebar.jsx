@@ -4,9 +4,13 @@ import { NotesContext } from "../Context/NotesContextProvider";
 import styles from "../styles/appSidebar.module.css";
 
 export default function AppSidebar() {
-  const { isOpen, setIsOpen } = useContext(NotesContext);
+  const { isOpen, toggleIsOpen } = useContext(NotesContext);
   return (
-    <div data-toggle={isOpen && "true"} className={styles.sidebar}>
+    <div
+      onClick={toggleIsOpen}
+      data-toggle={isOpen && "true"}
+      className={styles.sidebar}
+    >
       <div className={styles.sidebar__container}>
         <span>Notebook</span>
         <nav>
