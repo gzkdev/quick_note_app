@@ -1,0 +1,10 @@
+.app {
+  width: 100%;
+  display: grid;
+}
+
+@media (min-width: 1200px) {
+  .app {
+    grid-template-columns: 280px 1fr;
+  }
+}
