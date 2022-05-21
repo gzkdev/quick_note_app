@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useContext } from "react";
+import { NotesContext } from "../Context/NotesContextProvider";
 import styles from "../styles/appSidebar.module.css";
 
 export default function AppSidebar() {
-  const [isOpen, setIsOpen] = useState(true);
-  const toggleIsOpen = () => setIsOpen((prev) => !prev);
-
+  const { isOpen, setIsOpen } = useContext(NotesContext);
   return (
-    <div className={styles.sidebar}>
+    <div data-toggle={isOpen && "true"} className={styles.sidebar}>
       <div className={styles.sidebar__container}>
         <span>Notebook</span>
         <nav>

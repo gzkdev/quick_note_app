@@ -5,12 +5,9 @@ export const NotesContext = createContext()
 
 export default function NotesContextProvider({ children }) {
     const [notes, setNotes] = useState({});
-    const [trashedNotes, setTrashedNotes] = useState({});
+    const [trashedNotes, setTrashedNotes] = useState({}); const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        console.log(notes);
-        console.log(trashedNotes)
-    }, [notes, trashedNotes])
+    const toggleIsOpen = () => setIsOpen((prev) => !prev);
 
     const handleAddNote = (data) => {
         const newNotes = { data, ...notes };
@@ -31,7 +28,12 @@ export default function NotesContextProvider({ children }) {
         delete trashedNotes[id]
     }
 
+    useEffect(() => {
+        console.log(notes);
+        console.log(trashedNotes)
+    }, [notes, trashedNotes])
+
     return (
-        <NotesContext.Provider value={{ handleAddNote, handleDeleteNote, handleUpdateNote, handleDeleteTrashedNote }}>{children}</NotesContext.Provider>
+        <NotesContext.Provider value={{ handleAddNote, handleDeleteNote, handleUpdateNote, handleDeleteTrashedNote, isOpen, toggleIsOpen }}>{children}</NotesContext.Provider>
     )
 }

@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 import AppHead from '../components/AppHead'
-import NotesContextProvider from '../Data/NotesContextProvider'
+import NotesContextProvider from '../Context/NotesContextProvider'
 import AppSidebar from '../components/AppSidebar'
 
 export default function Home() {
