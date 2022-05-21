@@ -1,0 +1,29 @@
+.searchbar {
+  height: 48px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  border: 1px solid black;
+  top: 1rem;
+  display: flex;
+  border-radius: 48px;
+  overflow: hidden;
+}
+
+.searchbar__input {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.searchbar__button {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: 200ms;
+}
+
+.searchbar__button:active {
+  background-color: gray;
+}
