@@ -1,3 +1,4 @@
+import AddNoteForm from "../components/AddNoteForm"
 import AppHead from "../components/AppHead"
 import AppNotesContainer from "../components/AppNotesContainer"
 import AppSidebar from "../components/AppSidebar"
@@ -10,6 +11,7 @@ export default function Home() {
         <AppSidebar />
         <AppNotesContainer />
       </div>
+      <AddNoteForm />
     </>
   )
 }

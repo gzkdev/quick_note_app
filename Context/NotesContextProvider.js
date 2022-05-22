@@ -7,6 +7,7 @@ export const NotesContextProvider = ({ children }) => {
     const [notes, setNotes] = useState({})
     const [isOpen, setIsOpen] = useState(false)
     const [isReversed, setIsReversed] = useState(false)
+    const [isAddNoteFormOpen, setIsAddNoteFormOpen] = useState(false);
 
     const addNote = (data) => {
         setNotes({ ...notes, [data.id]: data })
@@ -14,9 +15,11 @@ export const NotesContextProvider = ({ children }) => {
 
     const toggleIsOpen = () => setIsOpen(!isOpen)
 
+    const toggleIsAddNoteFormOpen = () => setIsAddNoteFormOpen(!isAddNoteFormOpen)
+
     const toggleIsReversed = () => setIsReversed(!isReversed)
 
-    return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen, isReversed, toggleIsReversed }}>{children}</NotesContext.Provider>
+    return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen, isReversed, toggleIsReversed, isAddNoteFormOpen, toggleIsAddNoteFormOpen, addNote }}>{children}</NotesContext.Provider>
 }
 
 export const useNotesContext = () => {
