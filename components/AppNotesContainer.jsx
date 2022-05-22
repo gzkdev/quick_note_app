@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "../styles/appNotesContainer.module.css";
 import AppNote from "./AppNote";
 import AppSearchbar from "./AppSearchbar";
+import EmptyState from "./EmptyState";
 
 export default function AppNotesContainer() {
   const { notes, isReversed, toggleIsReversed } = useNotesContext();
@@ -32,7 +33,7 @@ export default function AppNotesContainer() {
             : "No matching notes"}
         </div>
       ) : (
-        "You have no notes"
+        <EmptyState />
       )}
     </div>
   );
