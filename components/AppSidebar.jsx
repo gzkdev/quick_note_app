@@ -11,9 +11,9 @@ export default function AppSidebar() {
       className={styles.sidebar}
     >
       <div className={styles.sidebar__container}>
-        <span>Notebook</span>
-        <nav>
-          <ul>
+        <span className={styles.sidebar__title}>notebook</span>
+        <nav className={styles.sidebar__nav}>
+          <ul className={styles.sidebar__list}>
             <li>
               <Link href="/">
                 <a>All Notes</a>

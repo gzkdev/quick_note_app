@@ -17,6 +17,8 @@
   top: 0;
   left: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   width: min(70%, 400px);
   background-color: #fff;
   padding: 3rem 1rem;
@@ -34,7 +36,41 @@
   transform: translate(0, 0);
 }
 
-@media (min-width: 1000px) {
+.sidebar__title {
+  font-size: 1.75rem;
+  word-wrap: break-word;
+  font-weight: 600;
+  display: block;
+  margin: 1rem 0;
+}
+
+.sidebar__nav {
+  flex-grow: 1;
+}
+
+.sidebar__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidebar__list li {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar__list li a {
+  width: 100%;
+  display: inline-block;
+  border-radius: 40px;
+}
+
+.sidebar__list li:last-child {
+  margin-top: auto;
+}
+
+@media (min-width: 1200px) {
   .sidebar {
     position: sticky;
     pointer-events: all;
