@@ -10,10 +10,9 @@ export default function AppNotesContainer() {
 
   const NOTES_LIST = Object.keys(notes);
   const NOTES_LIST_REVERSED = Object.keys(notes).reverse();
+  const NOTES_TO_DISPLAY = isReversed ? NOTES_LIST_REVERSED : NOTES_LIST;
 
-  const NOTES_ON_SCREEN = (
-    isReversed ? NOTES_LIST_REVERSED : NOTES_LIST
-  ).filter((note) =>
+  const NOTES_ON_SCREEN = NOTES_TO_DISPLAY.filter((note) =>
     notes[note].title.toLowerCase().includes(searchText.toLowerCase())
   );
 
