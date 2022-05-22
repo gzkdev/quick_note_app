@@ -5,8 +5,11 @@ export const NotesContext = createContext();
 
 export const NotesContextProvider = ({ children }) => {
     const [notes, setNotes] = useState({})
+    const [isOpen, setIsOpen] = useState(false)
 
-    return <NotesContext.Provider value={{ notes }}>{children}</NotesContext.Provider>
+    const toggleIsOpen = () => setIsOpen(!isOpen);
+
+    return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen }}>{children}</NotesContext.Provider>
 }
 
 export const useNotesContext = () => {
