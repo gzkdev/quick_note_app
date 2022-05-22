@@ -8,6 +8,10 @@ export const NotesContextProvider = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [isReversed, setIsReversed] = useState(false)
 
+    const addNote = (data) => {
+        setNotes({ ...notes, [data.id]: data })
+    }
+
     const toggleIsOpen = () => setIsOpen(!isOpen)
 
     const toggleIsReversed = () => setIsReversed(!isReversed)
