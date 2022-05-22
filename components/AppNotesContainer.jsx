@@ -1,4 +1,5 @@
 import styles from "../styles/appNotesContainer.module.css";
+import AppNote from "./AppNote";
 import AppSearchbar from "./AppSearchbar";
 
 export default function AppNotesContainer() {
@@ -10,7 +11,7 @@ export default function AppNotesContainer() {
       </div>
       <AppSearchbar />
       <div className={styles.notes__container}>
-        <div className={styles.app__note}></div>
+        <AppNote />
       </div>
     </div>
   );
