@@ -3,6 +3,10 @@
   padding: 1rem 1rem;
   border-radius: 1rem;
   height: fit-content;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .note__header {
@@ -19,14 +23,8 @@
   position: relative;
 }
 
-.note__edit_btn {
-  margin-left: auto;
-  margin-right: 1rem;
-}
-
 .note__actions > button {
   min-height: 2rem;
-  outline: 1px solid #fff;
   padding: 0 0.4rem;
 }
 
@@ -67,6 +65,28 @@
 }
 
 .note__title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
+}
+
+.note__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note__edit_btn {
+  --scale: 32px;
+  width: var(--scale);
+  height: var(--scale);
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  transition: transform 200ms;
+}
+
+.note__edit_btn:active {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
