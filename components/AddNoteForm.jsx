@@ -24,10 +24,7 @@ export default function AddNoteForm() {
     }
 
     return (
-      <div
-        data-toggle={isAddNoteFormOpen && isAddNoteFormOpen}
-        className={styles.overlay}
-      >
+      <div data-toggle={isAddNoteFormOpen} className={styles.overlay}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.form__header}>
             <button

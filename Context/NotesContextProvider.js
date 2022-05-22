@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 export const NotesContext = createContext();
 
@@ -18,6 +18,8 @@ export const NotesContextProvider = ({ children }) => {
     const toggleIsAddNoteFormOpen = () => setIsAddNoteFormOpen(!isAddNoteFormOpen)
 
     const toggleIsReversed = () => setIsReversed(!isReversed)
+
+    useEffect(() => console.log(isAddNoteFormOpen), [isAddNoteFormOpen])
 
     return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen, isReversed, toggleIsReversed, isAddNoteFormOpen, toggleIsAddNoteFormOpen, addNote }}>{children}</NotesContext.Provider>
 }
