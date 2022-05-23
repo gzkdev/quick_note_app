@@ -22,9 +22,3 @@
     --scale: 64px;
   }
 }
-
-@media (min-width: 1200px) {
-  .button {
-    display: none;
-  }
-}
