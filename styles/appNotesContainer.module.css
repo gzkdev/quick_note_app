@@ -19,3 +19,12 @@
   border-radius: 1rem;
   min-height: 140px;
 }
+
+@media (min-width: 768px) {
+  .app__main {
+    padding: 3rem 3rem;
+  }
+  .notes__container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
