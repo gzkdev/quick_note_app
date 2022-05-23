@@ -6,7 +6,8 @@ import AppSearchbar from "./AppSearchbar";
 import EmptyState from "./EmptyState";
 
 export default function AppNotesContainer() {
-  const { notes, isReversed, toggleIsReversed } = useNotesContext();
+  const { notes, isReversed, toggleIsReversed, toggleIsOpen } =
+    useNotesContext();
   const [searchText, setSearchText] = useState("");
 
   const NOTES_LIST = Object.keys(notes);
@@ -23,7 +24,11 @@ export default function AppNotesContainer() {
         <span>Hello dear 👋🏾</span>
         <h1>All Notes</h1>
       </div>
-      <AppSearchbar value={searchText} function={setSearchText} />
+      <AppSearchbar
+        state={searchText}
+        stateFunction={setSearchText}
+        toggle={toggleIsOpen}
+      />
       {NOTES_LIST.length > 0 ? (
         <div className={styles.notes__container}>
           {NOTES_ON_SCREEN.length > 0

@@ -1,9 +1,8 @@
 import { useNotesContext } from "../context/NotesContextProvider";
 import styles from "../styles/appSearchbar.module.css";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
-export default function AppSearchbar() {
-  const { toggleIsOpen } = useNotesContext();
-
+export default function AppSearchbar({ state, stateFunction, toggle }) {
   return (
     <div className={styles.searchbar}>
       <input
@@ -12,10 +11,9 @@ export default function AppSearchbar() {
         name="search"
         placeholder="Search notes..."
       />
-      <button
-        onClick={toggleIsOpen}
-        className={styles.searchbar__button}
-      ></button>
+      <button onClick={toggle} className={styles.searchbar__button}>
+        <HamburgerMenuIcon />
+      </button>
     </div>
   );
 }
