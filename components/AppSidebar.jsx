@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { useNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesContextProvider";
 import styles from "../styles/appSidebar.module.css";
 
 export default function AppSidebar() {
-  const { isOpen, toggleIsOpen } = useNotesContext();
+  const { isOpen, toggleIsOpen } = UseNotesContext();
   return (
     <div
       onClick={toggleIsOpen}

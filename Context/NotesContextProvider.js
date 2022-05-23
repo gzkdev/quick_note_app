@@ -24,6 +24,6 @@ export const NotesContextProvider = ({ children }) => {
     return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen, isReversed, toggleIsReversed, isAddNoteFormOpen, toggleIsAddNoteFormOpen, addNote }}>{children}</NotesContext.Provider>
 }
 
-export const useNotesContext = () => {
+export const UseNotesContext = () => {
     return useContext(NotesContext);
 }

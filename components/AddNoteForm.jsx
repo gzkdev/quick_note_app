@@ -1,10 +1,10 @@
-import { useNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesContextProvider";
 import styles from "../styles/addNoteForm.module.css";
 import { useRef } from "react";
 
 const AddNoteForm = () => {
   const { isAddNoteFormOpen, toggleIsAddNoteFormOpen, addNote } =
-    useNotesContext();
+    UseNotesContext();
   const noteTitle = useRef();
   const noteText = useRef();
 

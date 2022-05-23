@@ -1,4 +1,4 @@
-import { useNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesContextProvider";
 import { useState } from "react";
 import styles from "../styles/appNotesContainer.module.css";
 import AppNote from "./AppNote";
@@ -7,7 +7,7 @@ import EmptyState from "./EmptyState";
 
 export default function AppNotesContainer() {
   const { notes, isReversed, toggleIsReversed, toggleIsOpen } =
-    useNotesContext();
+    UseNotesContext();
   const [searchText, setSearchText] = useState("");
 
   const NOTES_LIST = Object.keys(notes);
