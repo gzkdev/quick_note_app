@@ -1,4 +1,4 @@
-import { UseNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesData";
 import styles from "../styles/addNoteForm.module.css";
 import { useRef } from "react";
 

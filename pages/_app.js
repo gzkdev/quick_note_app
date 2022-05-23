@@ -1,4 +1,4 @@
-import { NotesContextProvider } from '../context/NotesContextProvider'
+import { NotesContextProvider } from '../context/NotesData'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {

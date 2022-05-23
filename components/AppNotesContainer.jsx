@@ -1,4 +1,4 @@
-import { UseNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesData";
 import { useState } from "react";
 import styles from "../styles/appNotesContainer.module.css";
 import AppNote from "./AppNote";

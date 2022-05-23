@@ -1,4 +1,4 @@
-import { UseNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesData";
 import styles from "../styles/floatingButton.module.css";
 import { PlusIcon } from "@radix-ui/react-icons";
 

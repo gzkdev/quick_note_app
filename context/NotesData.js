@@ -19,7 +19,9 @@ export const NotesContextProvider = ({ children }) => {
 
     const toggleIsReversed = () => setIsReversed(!isReversed)
 
-    useEffect(() => console.log(isAddNoteFormOpen), [isAddNoteFormOpen])
+    useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes))
+    }, [notes])
 
     return <NotesContext.Provider value={{ notes, isOpen, toggleIsOpen, isReversed, toggleIsReversed, isAddNoteFormOpen, toggleIsAddNoteFormOpen, addNote }}>{children}</NotesContext.Provider>
 }

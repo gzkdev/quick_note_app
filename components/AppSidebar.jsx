@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UseNotesContext } from "../context/NotesContextProvider";
+import { UseNotesContext } from "../context/NotesData";
 import styles from "../styles/appSidebar.module.css";
 
 export default function AppSidebar() {
