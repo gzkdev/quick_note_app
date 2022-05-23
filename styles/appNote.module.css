@@ -25,7 +25,6 @@
 
 .note__actions > button {
   min-height: 2rem;
-  padding: 0 0.4rem;
 }
 
 .note__actions:focus-within .note__actions_menu {

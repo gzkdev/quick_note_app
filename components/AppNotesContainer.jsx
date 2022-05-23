@@ -1,5 +1,6 @@
 import { UseNotesContext } from "../context/NotesData";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "../styles/appNotesContainer.module.css";
 import AppNote from "./AppNote";
 import AppSearchbar from "./AppSearchbar";
@@ -30,13 +31,15 @@ export default function AppNotesContainer() {
         toggle={toggleIsOpen}
       />
       {NOTES_LIST.length > 0 ? (
-        <div className={styles.notes__container}>
-          {NOTES_ON_SCREEN.length > 0
-            ? NOTES_ON_SCREEN.map((note) => (
-                <AppNote key={notes[note].id} data={notes[note]} />
-              ))
-            : "No matching notes"}
-        </div>
+        <motion.div layout className={styles.notes__container}>
+          {NOTES_ON_SCREEN.length > 0 ? (
+            NOTES_ON_SCREEN.map((note) => (
+              <AppNote key={notes[note].id} data={notes[note]} />
+            ))
+          ) : (
+            <motion.div layout>No matching notes</motion.div>
+          )}
+        </motion.div>
       ) : (
         <EmptyState />
       )}
