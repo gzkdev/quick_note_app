@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { UseNotesContext } from "../context/NotesData";
 import styles from "../styles/appSidebar.module.css";
+import {
+  LayersIcon,
+  TrashIcon,
+  MoonIcon,
+  CubeIcon,
+  StarIcon,
+} from "@radix-ui/react-icons";
 
 export default function AppSidebar() {
   const { isOpen, toggleIsOpen } = UseNotesContext();
@@ -11,33 +18,42 @@ export default function AppSidebar() {
       className={styles.sidebar}
     >
       <div className={styles.sidebar__container}>
-        <span className={styles.sidebar__title}>notebook</span>
+        <span className={styles.sidebar__title}>Minotes</span>
         <nav className={styles.sidebar__nav}>
           <ul className={styles.sidebar__list}>
             <li>
               <Link href="/">
-                <a>All Notes</a>
+                <a>
+                  <CubeIcon /> <span>All Notes</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Favorites</a>
+                <a>
+                  <StarIcon /> <span>Favorites</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Trash</a>
+                <a>
+                  <TrashIcon /> <span>Trash</span>
+                </a>
               </Link>
             </li>
             <li>
-              <Link href="/">
-                <a>All Notes</a>
-              </Link>
+              <button>
+                <LayersIcon />
+                <span>Add new notes to top</span>
+              </button>
             </li>
+
             <li>
-              <Link href="/">
-                <a>Categories</a>
-              </Link>
+              <button>
+                <MoonIcon />
+                <span>Toggle Dark Mode</span>
+              </button>
             </li>
           </ul>
         </nav>
